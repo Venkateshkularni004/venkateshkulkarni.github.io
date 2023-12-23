@@ -1,0 +1,6 @@
+.container {
+  width: 100%;
+  row-gap: var(--dimension-spacing-large);
+  flex-direction: column;
+  display: flex;
+}

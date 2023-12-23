@@ -1,0 +1,163 @@
+/**
+ * Global variables.
+ * 
+ * @remarks
+ * The `--font-futura` and `--font-rubik` variables are sourced directly from next.js.
+ * 
+ * @see {@link ../core/fonts.ts App Fonts}
+ */
+:root {
+  /* Colours */
+  --color-green-100: #66bb6a;
+  --color-blue-100: #171e27;
+  --color-blue-80: #222a37;
+  --color-blue-20: #61656d;
+
+  --color-background: var(--color-blue-100);
+  --color-foreground: #fff;
+  --color-hyperlink: var(--color-green-100);
+  --color-muted: var(--color-blue-20);
+
+  /* Fonts */
+  --font-family-default: var(--font-futura);
+  --font-family-alternate: var(--font-rubik);
+  --font-size-default: 18px;
+  --font-size-huge: 38px;
+  --font-size-large: 28px;
+  --font-size-medium: 24px;
+  --font-size-small: 15px;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Dimensions */
+  --dimension-spacing-small: 12px;
+  --dimension-spacing-medium: 18px;
+  --dimension-spacing-large: 30px;
+  --dimension-spacing-huge: 40px;
+  --dimension-spacing-colossal: 100px;
+  --dimension-width-header: 380px;
+  --dimension-border-radius: 8px;
+}
+
+/**
+ * CSS reset.
+ * 
+ * @remarks
+ * Modernised adaption of meyerweb reset.
+ * 
+ * @see {@link https://meyerweb.com/eric/tools/css/reset/ CSS Tools: Reset CSS}
+ */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+body,
+h1, h2, h3, h4, p,
+li,
+i,
+figure, figcaption,
+blockquote,
+dl, dd,
+fieldset,
+pre {
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-family: var(--font-family-default);
+}
+ul[class], ol[class] {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  border: 0;
+  display: block;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+:focus,
+fieldset {
+  min-width: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+}
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  box-shadow: none;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**
+ * Structure.
+ */
+body {
+  min-height: 100vh;
+  padding-left: var(--dimension-width-header);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: var(--font-size-default);
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  text-rendering: optimizespeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Typography
+ */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-family-alternate);
+}
+.title {
+  margin: 0 0 var(--dimension-spacing-large);
+  font-size: var(--font-size-huge);
+}
+p {
+  margin: 0 0 var(--dimension-spacing-medium);
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Hyperlinks
+ */
+a:not([class]):link, a:not([class]):visited, a:not([class]):hover, a:not([class]):active {
+  color: var(--color-hyperlink);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:not([class]):hover, a:not([class]):visited:hover {
+  text-decoration: underline;
+}
+
+/**
+ * Responsive.
+ * 
+ * @name Tablet landscape
+ */
+@media (max-width: 1023px) {
+  :root {
+    --dimension-width-header: 100%;
+    --dimension-spacing-colossal: 40px;
+    --font-size-medium: 22px;
+  }
+  body {
+    padding: 0
+  }
+}

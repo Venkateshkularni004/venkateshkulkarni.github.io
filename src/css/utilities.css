@@ -1,0 +1,19 @@
+/**
+ * Utilities/Helpers
+ * 
+ * The following classes comprise a set of utility and helper classes designed to enforce specific styles on elements.
+ * Each class is marked with the !important declaration to increase its specificity and override any conflicting styles.
+ * It is recommended to utilise these utility classes only when you are certain that they precisely align with the
+ * desired styling outcome you intend to achieve.
+ */
+.green {
+  color: var(--color-green-100) !important;
+}
+.muted {
+  color: var(--color-muted) !important;
+}
+
+.stop::after {
+  content: ".";
+  color: var(--color-green-100)
+}

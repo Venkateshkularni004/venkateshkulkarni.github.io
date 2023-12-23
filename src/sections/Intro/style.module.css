@@ -1,0 +1,81 @@
+.intro {
+  --width: 500px;
+  width: var(--width);
+  padding: var(--dimension-spacing-medium) 50px;
+  background: #fff;
+  color: var(--color-blue-100);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: var(--width);
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+.hello {
+  margin: 0 0 var(--dimension-spacing-large);
+  color: var(--color-blue-80);
+  font-size: 30px;
+  font-weight: var(--font-weight-normal);
+}
+.intro h1 {
+  margin: 0 0 var(--dimension-spacing-huge);
+  font-size: 77px;
+  line-height: 1.1em
+}
+.desc {
+  margin: 0 0 var(--dimension-spacing-huge);
+  color: var(--color-muted)
+}
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-gap: var(--dimension-spacing-huge);
+  display: flex
+}
+.social li .link {
+  transition: color .2s linear;
+  color: var(--color-blue-80);
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.social li a:hover {
+  color: var(--color-green-100)
+}
+
+.photo {
+  background-image: url(../../../public/steve-mckeogh.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+/**
+ * Responsive.
+ * 
+ * @name Tablet landscape
+ */
+@media (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+  }
+  .intro {
+    --width: 100%;
+    padding-left: var(--dimension-spacing-huge);
+    padding-right: var(--dimension-spacing-huge);
+  }
+  .intro, .photo {
+    min-height: 100vh;
+  }
+  .intro h1 {
+    font-size: 57px
+  }
+  .social {
+    flex-direction: column;
+  }
+}

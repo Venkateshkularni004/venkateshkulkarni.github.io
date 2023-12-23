@@ -1,0 +1,38 @@
+{
+  "name": "mckeogh.uk",
+  "description": "Passionate and experienced Full Stack Software Engineer based in London. Specialising in TypeScript, Node.js, React, GraphQL, and PostgreSQL.",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekeogh/mckeogh.uk.git"
+  },
+  "author": {
+    "name": "Steve McKeogh",
+    "email": "steve.mckeogh@gmail.com",
+    "url": "http://mckeogh.uk"
+  },
+  "homepage": "https://mckeogh.uk",
+  "scripts": {
+    "dev": "next dev -H www.dev.mckeogh.uk -p 7000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vercel/analytics": "^1.0.1",
+    "classnames": "^2.3.2",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "eslint-plugin-import": "^2.27.5",
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  }
+}

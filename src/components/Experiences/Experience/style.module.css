@@ -1,0 +1,114 @@
+.container {
+  margin-bottom: var(--dimension-spacing-small);
+  display: flex;
+}
+
+.container > time {
+  margin-right: var(--dimension-spacing-large);
+  padding-top: 4px;
+  color: var(--color-green-100);
+  font-weight: var(--font-weight-bold);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+.icon {
+  --size: 35px;
+  width: var(--size);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: var(--size);
+  position: relative;
+}
+.icon::after {
+  --width: 2px;
+  content: "";
+  width: var(--width);
+  background: var(--color-green-100);
+  left: calc(50% - calc(var(--width) / 2));
+  top: calc(var(--size) + var(--dimension-spacing-small));
+  bottom: 0;
+  position: absolute;
+}
+.icon i {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: solid 3px var(--color-green-100);
+  display: block;
+  position: relative;
+}
+.icon i::after {
+  transition: opacity .2s linear;
+  --smaller: calc(var(--size) - 16px);
+  content: "";
+  width: var(--smaller);
+  height: var(--smaller);
+  background: var(--color-green-100);
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  position: absolute;
+  opacity: 0;
+}
+.content {
+  transition: opacity .2s linear;
+  margin-left: var(--dimension-spacing-large);
+  padding: 2px 0 var(--dimension-spacing-huge);
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  opacity: .6;
+}
+.content aside {
+  --gap: 25px;
+  margin: 0 0 var(--dimension-spacing-small);
+  column-gap: var(--gap);
+  color: var(--color-muted);
+  display: flex;
+}
+.content aside time, .content aside .role {
+  position: relative;
+}
+.content aside time::after, .content aside .role::after {
+  --size: 4px;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  background: var(--color-green-100);
+  right: calc(-1 * calc((var(--gap) / 2) + calc(var(--size) / 2)));
+  top: calc(50% - calc(var(--size) / 2));
+  position: absolute;
+}
+
+.container:last-child .icon::after {
+  display: none
+}
+.container:hover .icon i::after {
+  opacity: 1;
+}
+.container:hover .content {
+  opacity: 1;
+}
+
+/**
+ * Responsive.
+ * 
+ * @name Tablet landscape
+ */
+@media (max-width: 1023px) {
+  .container > time, .icon {
+    display: none
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
+  .content aside {
+    flex-direction: column;
+  }
+  .content aside *::after {
+    display: none
+  }
+}

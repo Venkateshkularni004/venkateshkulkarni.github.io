@@ -1,0 +1,16 @@
+.container {
+  margin: 0 0 var(--dimension-spacing-large);
+}
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  margin: 0 0 2px;
+  color: var(--color-green-100);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: block
+}

@@ -1,0 +1,25 @@
+.container {
+  padding: calc(var(--dimension-spacing-huge) - 10px) var(--dimension-spacing-huge) var(--dimension-spacing-huge);
+ 
+}
+.highlighted {
+  background: var(--color-blue-80);
+}
+.icon {
+  margin: 0 0 6px -11px;
+  display: block
+}
+
+.title {
+  margin-bottom: var(--dimension-spacing-medium);
+  font-size: var(--font-size-large)
+}
+
+/**
+ * Responsive.
+ */
+@media (max-width: 1320px) {
+  .container {
+    padding: var(--dimension-spacing-large);
+  }
+}

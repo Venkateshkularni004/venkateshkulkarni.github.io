@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  column-gap: var(--dimension-spacing-large);
+  display: flex;
+}
+
+/**
+ * Responsive.
+ * 
+ * @name Tablet landscape
+ */
+@media (max-width: 1320px) {
+  .container {
+    row-gap: var(--dimension-spacing-large);
+    flex-direction: column;
+  }
+}

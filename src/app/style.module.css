@@ -1,0 +1,46 @@
+.header {
+  width: var(--dimension-width-header);
+  min-height: 100vh;
+  padding: var(--dimension-spacing-medium) var(--dimension-spacing-huge);
+  background: var(--color-blue-80);
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+}
+.button {
+  margin: var(--dimension-spacing-medium);
+  padding: var(--dimension-spacing-small);
+  background: var(--color-green-100);
+  color: #fff;
+  text-align: center;
+  text-decoration: none !important;
+  font-weight: var(--font-weight-bold);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  opacity: .9;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 1;
+}
+
+/**
+ * Responsive.
+ * 
+ * @name Tablet landscape
+ */
+@media (max-width: 1023px) {
+  .header {
+    position: static;
+  }
+  .button {
+    display: none
+  }
+}
